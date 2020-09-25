@@ -37,8 +37,6 @@
               "node_modules/jquery/dist/jquery.min.js",
                 "src/assets/js/core/popper.min.js",
                 "src/assets/js/core/bootstrap-material-design.min.js",
-                "src/assets/js/plugins/perfect-scrollbar.jquery.min.js",
-                "src/assets/js/plugins/bootstrap-notify.js",
                 "src/assets/js/material-dashboard.min1c51.js",
                 "src/assets/demo/demo.js"
             ],
