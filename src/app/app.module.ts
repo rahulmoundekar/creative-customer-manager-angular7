@@ -4,9 +4,6 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { from } from 'rxjs';
-import { DefaultComponent } from './layout/default/default.component';
 import { DefaultModule } from './layout/default/default.module';
 
 @NgModule({
