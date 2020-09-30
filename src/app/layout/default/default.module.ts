@@ -7,6 +7,8 @@ import { ProfileComponent } from 'src/app/modules/profile/profile.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CustomerListViewComponent } from 'src/app/modules/dashboard/customer-list-view/customer-list-view.component';
 import { CreateCustomerComponent } from 'src/app/modules/dashboard/create-customer/create-customer.component';
+import { FormsModule } from '@angular/forms';
+import { CustomerInfoComponent } from 'src/app/modules/dashboard/customer-info/customer-info.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { CreateCustomerComponent } from 'src/app/modules/dashboard/create-custom
     DashboardComponent,
     ProfileComponent,
     CreateCustomerComponent,
-    CustomerListViewComponent
+    CustomerListViewComponent,
+    CustomerInfoComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ]
 })
 export class DefaultModule { }

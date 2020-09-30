@@ -5,6 +5,7 @@ import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { ProfileComponent } from './modules/profile/profile.component';
 import { CreateCustomerComponent } from './modules/dashboard/create-customer/create-customer.component';
 import { CustomerListViewComponent } from './modules/dashboard/customer-list-view/customer-list-view.component';
+import { CustomerInfoComponent } from './modules/dashboard/customer-info/customer-info.component';
 
 const routes: Routes = [{
   path: '',
@@ -24,6 +25,9 @@ const routes: Routes = [{
   },{
     path: 'dashboard/listView',
     component:CustomerListViewComponent
+  },{
+    path: 'customerDetails',
+    component:CustomerInfoComponent
   }
 
 ]

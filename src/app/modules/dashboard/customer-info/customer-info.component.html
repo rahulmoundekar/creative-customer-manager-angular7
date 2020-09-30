@@ -1,0 +1,44 @@
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 col-sm-2">
+          <button class="btn btn-primary btn-tumblr btn-round btn-sm" routerLink="/">
+            <i class="fa fa-home"></i> Dashboard
+            <div class="ripple-container"></div></button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <div class="card ">
+            <div class="card-header card-header-rose card-header-icon">
+              <div class="card-icon">
+                <i class="material-icons">mail_outline</i>
+              </div>
+              <h4 class="card-title">Customer Information</h4>
+            </div>
+            <div class="card-body ">
+              <div *ngIf="customer">
+                <div>
+                  <label>Name: </label> {{customer.name}}
+                </div>
+                <div>
+                  <label>Email Address: </label> {{employee.email}}
+                </div>
+                <div>
+                  <label>Mobile number : </label> {{employee.mobile}}
+                </div>
+                <div>
+                  <label>Addres: </label> {{employee.address}}
+                </div>
+              
+                <span class="button is-small btn-danger" (click)='deleteCustomer(customer.id)'>Delete</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

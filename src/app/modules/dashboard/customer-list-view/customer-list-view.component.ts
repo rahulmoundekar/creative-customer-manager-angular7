@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Customer } from 'src/app/customer';
+import { Router } from '@angular/router';
+import { CustomerService } from 'src/app/customer.service';
 
 @Component({
   selector: 'app-customer-list-view',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerListViewComponent implements OnInit {
 
-  constructor() { }
+  customers: Observable<Customer[]>;
+
+
+  constructor(private router: Router, private customerService: CustomerService) { }
 
   ngOnInit() {
+    this.getCustomers();
+  }
+
+  getCustomers() {
+    this.customers = this.customerService.getCustomerList();
+  }
+
+  deleteCustomer(id: number) {
+    this.customerService.deleteCustomerById(id).subscribe(
+      data => {
+        this.getCustomers();
+      },
+      error => console.log(error));
   }
 
 }
